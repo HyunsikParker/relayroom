@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; base-uri 'none'; form-action 'none'"><title>Privacy notice — Relayroom</title><link rel="stylesheet" href="style.css"></head>
+<body><header><a class="brand" href="./">Relayroom</a><span class="label">Privacy notice</span></header><main class="callback"><h1>A single connection check.</h1>
+<p>Relayroom is a static connection-preparation tool. It has no application server, analytics or advertising.</p>
+<ul><li>The public Client ID, a random request state and a timestamp are saved in this tab’s session storage when you start a check. They are removed when the callback is processed. Closing the tab also clears that storage.</li>
+<li>If you authorize access, the callback reads the returned access token in browser memory and removes the URL fragment. It sends that token only to Twitch’s token-validation endpoint.</li>
+<li>The validation response includes an account ID, login, client ID, permissions and expiry. Relayroom checks the app, account, permission and expiry fields, then discards the response and token. It does not display or store your account identity.</li>
+<li>Relayroom does not read chat messages, send messages, start broadcasts or maintain an OAuth session. The requested read-only chat permission is checked for the planned connection probe.</li>
+<li>GitHub Pages serves the files and may process request metadata such as IP addresses under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>. Twitch processes authorization and validation under <a href="https://legal.twitch.com/en/legal/privacy-notice/">Twitch’s privacy notice</a>.</li>
+<li>Closing this page ends the local check; it does not revoke the permission you granted on Twitch. You can remove that permission in Twitch’s Connections settings.</li></ul>
+<p>This notice describes this version of the connection tool, dated October 30, 2026.</p><a href="./">Return to setup</a></main></body></html>

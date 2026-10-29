@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Relayroom — Twitch connection check</title><link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script></head>
+<body><header><a class="brand" href="./">Relayroom</a><span class="label">Connection check</span></header>
+<main><h1>Check your Twitch connection.</h1><p class="intro">Set up a callback, then check that Twitch can return authorization to this app. Chat and streaming are not tested here.</p>
+<div class="steps"><section aria-labelledby="setup-title"><h2 id="setup-title">1. Register the callback</h2>
+<p>In your own Twitch application, add the URL below as an OAuth Redirect URL. Use a <strong>Confidential</strong> client for this implicit-grant flow. A client secret is not used by this browser check.</p>
+<label for="redirect">OAuth Redirect URL</label><input id="redirect" readonly aria-describedby="redirect-help"><p class="help" id="redirect-help">Copy the complete URL, including the trailing slash.</p><button class="secondary" id="copy" type="button">Copy callback URL</button>
+<p class="help">App registration, any account verification and developer terms are completed by the account owner in Twitch.</p></section>
+<section aria-labelledby="check-title"><h2 id="check-title">2. Start a connection check</h2><p>Use the public Client ID from that same application. Twitch will ask you to review read-only chat access.</p>
+<form><label for="client-id">Public Client ID</label><input id="client-id" required autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="client-help"><p class="help" id="client-help">Do not enter a client secret, password or access token.</p><button type="submit">Continue to Twitch</button></form></section></div>
+<p class="status" id="status" role="status" aria-live="polite"></p></main>
+<footer><p>This is a connection-preparation tool, not a working stream experience or a contest submission.</p><a href="privacy.html">Privacy notice</a> · <a href="https://github.com/HyunsikParker/relayroom">Source and setup</a></footer></body></html>
